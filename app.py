@@ -11,6 +11,6 @@ def quote():
 @app.get('/random')
 
 def random_quote():
-    quotes = requests.get('http://127.0.0.1:8000').json()
+    quotes = requests.get('https://quoteli.herokuapp.com/').json()
     quote = quotes['quoteText'] + "\n - by " + quotes["quoteAuthor"]
     return quote
